@@ -1,7 +1,7 @@
 # WebCrawler_DSJob
-A web crawler for grabbing Data Scientist  job description/requirement in Indeed.  
+A web crawler for grabbing Data Scientist  job description/requirement in **Indeed**.  
 
-
+(Since it needs specific name attributes, this web crawler only can use in Indeed websites.)
 
 When I do job searching for data scientist in Indeed, there exist plenty of companies and each of them has its unique job description and requirement. It 's a waste of time to click every website. It's not hard to find that all the job websites have the same structure in Indeed. 
 
