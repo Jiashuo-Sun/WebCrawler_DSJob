@@ -1,7 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
 
-# grab description in each specific website
+# grab description in each specific website and write it into a .txt file named by the company's name
+# More specific info about this function can be found in crawler_1page.py file.
 def get_describe(urlname):
     try:
         url = urlname
@@ -26,9 +27,10 @@ def get_describe(urlname):
                 content.write(row.text)
                 content.write('\n')
     except:
-        print(working)
+        print('working')
         
-
+# Jobs title:'Data Scientist', Location: 'New York, NY'.
+# Get URLs of the job list
 url = "https://www.indeed.com/jobs?q=data+scientist&l=New+York%2C+NY"
 response = requests.get(url)
 html = response.content
@@ -37,8 +39,11 @@ soup = BeautifulSoup(html,features="html5lib")
 body = soup.find(name = "td", attrs = {'id':'resultsCol'})
 
 test = body.find_all("a")
+
+# try to find all the URLs for jobs
 for names in test:
     urlname = names.get('href')
+    # try each url
     try:
         if ((urlname != None) & (len(urlname) >= 3)):
             urlname = 'https://www.indeed.com' + urlname
