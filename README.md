@@ -20,3 +20,11 @@ And Voila!
 ![demo_list](https://github.com/Jiashuo-Sun/WebCrawler_DSJob/blob/master/demo_picture/demo_list.png)
 
 ![demo_concept](https://github.com/Jiashuo-Sun/WebCrawler_DSJob/blob/master/demo_picture/demo_concept.png)
+
+
+
+Update:
+
+In the GetInfo_LinkedIn.py file, I grab the information of date, company name, applied position, location, and position web link in LinkedIn. Write these information into a .txt file. 
+
+All I need to do is to copy the link of the particular job web page and paste it into the terminal.
